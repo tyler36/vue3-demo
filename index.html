@@ -8,9 +8,24 @@
     <script src="https://unpkg.com/vue@3"></script>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <p><input type="text" v-model="greeting"></p>
+        <p>{{ greeting }} ({{ greeting.length }})</p>
+    </div>
     <script>
-        Vue.createApp({}).mount('#app');
+        Vue.createApp({
+            data() {
+                return {
+                    greeting: 'Hello World'
+                };
+            },
+
+            mounted(){
+                setTimeout(()=> {
+                    this.greeting ="changed"
+                }, 3000)
+            },
+        }).mount('#app');
     </script>
 </body>
 </html>
