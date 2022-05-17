@@ -1,7 +1,7 @@
 export default {
     template: /*html*/`
         <form @submit.prevent="add">
-            <div className="text-black border border-gray-600">
+            <div className="text-black border border-gray-600 flex">
                 <input v-model="newAssignment" placeholder="New Assignment ..." class="p-2">
                 <button type="submit" class="p-2 text-white border-left">Add</button>
             </div>
