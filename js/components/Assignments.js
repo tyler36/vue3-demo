@@ -25,7 +25,7 @@ export default {
     },
 
     created() {
-        fetch('http://localhost:3001/assignments')
+        fetch('http://localhost:3010/assignments')
             .then(response => response.json())
             .then( data => this.assignments = data )
     },
